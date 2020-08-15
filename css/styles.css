@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+/* GLOBAL */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.img{
+    width: 100%;
+}
+
+.content__header{
+    margin-bottom: 32px;
+}
+
+.content__header h3{
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.tag {
+    margin-bottom: 8px;
+    color: #adadad;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.white__paragraph{
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.divider__white{
+    width: 24px;
+    height: 1px;
+    margin-bottom: 12px;
+    background-color: #fff;
+}
+.divider__black{
+    width: 24px;
+    height: 1px;
+    margin-bottom: 12px;
+    background-color: #2c2c2c;
+}
+
+.grid__block{
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    box-shadow: 0 2px 3px -2px rgba(0, 0, 0, .2);
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+
+.white__heading{
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+    text-transform: capitalize;
+
+}
+
+
+/* HEADER */
+header{
+    width: 100%;
+    height: 90px;
+    margin-bottom: 24px;
+    background-color: #fff;
+    box-shadow: 0 2px 3px -2px rgba(0, 0, 0, .2);
+}
+
+
+.brand{
+    margin-right: 60px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+
+.navbar{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar__links{
+    display: flex;
+    flex-grow: 1;
+}
+
+.navbar__links ul{
+    display: flex;
+}
+.navbar__links li{
+    list-style: none;
+    margin-right: 30px;
+}
+.navbar__links li a{
+    color: #adadad;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar__links li a:hover{
+    color: #333333;
+}
+
+/* Hambuerger menu */
+.toggle__button{
+    position: absolute;
+    right: 0;
+    top: 40px;
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.toggle__button span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #333333;
+}
+
+/* .search {
+    display: none;
+} */
+
+
+
+/* CONTAINER */
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "hero hero hero sports"
+    "hero hero hero featured-news"
+    "most-recents special-edition special-edition featured-news"
+    "most-recents top-stories top-stories top-stories";
+}
+
+/* HERO */
+.hero{
+    grid-area: hero;
+    height: 100%;
+    background-image: url('../images/hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+}
+
+.hero .content__hero{
+    max-width: 320px;
+
+}
+.hero .hero__title{
+    font-size: 80px;
+    line-height: 80px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #fff;
+    text-indent: -3px;
+    text-transform: capitalize;
+
+}
+
+/* MOST RECENTS */
+.most__recents{
+    grid-area: most-recents;
+}
+
+.most__recents .content__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.most__recents .content__item{
+    display: flex;
+}
+
+.most__recents .text__items{
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+}
+
+.most__recents .news__number{
+    margin-right: 20px;
+    color: #adadad;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+
+/* MOST RECENTS */
+
+.featured__news{
+    grid-area: featured-news;
+
+}
+
+.featured__news .content__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.special__edition{
+    grid-area: special-edition;
+    background-image: url(../images/special\ edition.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.special__edition .special__width__text{
+    max-width: 50%;
+    min-height: auto;
+    margin-bottom: 0;
+}
+.top__stories{
+    grid-area: top-stories;
+}
+
+.sports{
+    grid-area: sports;
+    background-image: url("../images/sport.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* tablet */
+/* max-width: 990x = from 0 up to 990px  */
+@media screen and (max-width: 990px) {
+      /* .navbar */
+      .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .toggle__button{
+        display: flex;
+    }
+
+    /* .navbar-links ul */
+    .navbar__links{
+        display: none;
+        background-color:  #EEEEEE;
+        width: 100%;
+      
+    }
+
+    .navbar__links ul{
+        flex-direction: column;
+    }
+
+    .navbar__links li{
+        padding:15px;
+    }
+
+    .navbar__links.active{
+        display: flex;
+    }
+
+    .navbar__links li a{
+        color: #333333;
+    }
+    
+
+    .container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "hero hero"
+        "most-recents featured-news"
+        "special-edition top-stories"
+        "sports sports";
+    }
+}
+
+
+
+/* Mobile */
+/* max-width: 578px = from 0 up to 578px  */
+@media screen and (max-width: 578px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "hero"
+        "most-recents"
+        "featured-news"
+        "special-edition"
+        "top-stories"
+        "sports";
+    }
+}
+
+
+/* Hambuerger menu */
+/* .menu-toggle{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #333333;
+} */
